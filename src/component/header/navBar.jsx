@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 w-full">
+    <header className="bg-white shadow-lg sticky top-0 w-full z-10">
       <div className="container mx-auto flex justify-between lg:justify-normal items-center py-4 px-4 lg:px-0">
         <h1 className="text-2xl font-semibold">Your Logo</h1>
         {/* Hamburger menu button for mobile */}

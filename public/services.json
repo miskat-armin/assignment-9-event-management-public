@@ -2,8 +2,8 @@
   {
     "name": "Tech Expo",
     "image": "https://i.ibb.co/R7gsGK9/1.jpg",
-    "price": "$1,200",
-    "subtitle": "Showcasing the latest in tech",
+    "price": 1200,
+    "subtitle": "An immersive experience for tech enthusiasts, showcasing cutting-edge trends and innovations in technology.",
     "details": {
       "description": "The Tech Expo is an immersive service tailored for tech enthusiasts, providing a platform to showcase the cutting-edge trends and innovations in the world of technology. Our comprehensive package includes expert event planning and coordination, meticulous venue selection, state-of-the-art AV equipment, captivating keynote speakers, and customizable exhibition booths. Elevate your experience with optional add-ons, such as exclusive custom branding and interactive demos for an additional $500, or indulge in the VIP treatment with access to a luxurious lounge and extended event hours for an extra $1,000. Immerse yourself in the future of tech with Tech Expo, where innovation meets excellence.",
       "servicesIncluded": [
@@ -13,13 +13,13 @@
         "Keynote speakers",
         "Exhibition booths"
       ],
-      "priceRange": [
+      "additionalServices": [
         {
-          "additionalPrice": "$500",
+          "additionalPrice": 500,
           "services": ["Custom branding", "Interactive demos"]
         },
         {
-          "additionalPrice": "$1,000",
+          "additionalPrice": 1000,
           "services": ["VIP lounge access", "Extended event hours"]
         }
       ],
@@ -29,8 +29,8 @@
   {
     "name": "Gaming Con",
     "image": "https://i.ibb.co/KLbBD2j/1.jpg",
-    "price": "$1,500",
-    "subtitle": "A celebration of gaming culture",
+    "price": 1500,
+    "subtitle": "A jubilant celebration of gaming culture with thrilling tournaments, cosplay, and exclusive game demos.",
     "details": {
       "description": "Dive into the vibrant world of gaming with our Gaming Con service—a jubilant celebration of gaming culture that transcends boundaries. Immerse yourself in thrilling gaming tournaments, unleash your creativity in the cosplay contest, and experience the latest game demos firsthand. Our all-encompassing package includes meticulous event planning and coordination, ensuring a seamless and unforgettable experience. Enhance your adventure with optional add-ons, such as the allure of celebrity appearances and exclusive game releases for an additional $700. For the ultimate gaming royalty treatment, opt for the $1,200 package, offering VIP access to the after-party and personalized custom merchandise. Join us at Gaming Con for an unparalleled fusion of excitement, competition, and pure gaming joy.",
       "servicesIncluded": [
@@ -40,13 +40,13 @@
         "Game demos",
         "Vendor booths"
       ],
-      "priceRange": [
+      "additionalServices": [
         {
-          "additionalPrice": "$700",
+          "additionalPrice": 700,
           "services": ["Celebrity appearances", "Exclusive game releases"]
         },
         {
-          "additionalPrice": "$1,200",
+          "additionalPrice": 1200,
           "services": ["VIP access to after-party", "Custom merchandise"]
         }
       ],
@@ -56,8 +56,8 @@
   {
     "name": "Hackathon Challenge",
     "image": "https://i.ibb.co/sJphHjH/1.jpg",
-    "price": "$800",
-    "subtitle": "Innovate and create",
+    "price": 800,
+    "subtitle": "A journey of innovation and creativity for developers and innovators, with coding challenges and valuable mentorship.",
     "details": {
       "description": "Embark on a journey of innovation and creativity with our Hackathon Challenge service—an unparalleled platform designed for developers and innovators to come together and forge new solutions. Dive into the world of collaborative coding with our meticulously planned event, which includes not only the main hackathon challenges but also invaluable mentorship opportunities and chances to network with like-minded professionals. Winners of the challenge will be rewarded with exciting prizes, adding an extra layer of motivation to your coding endeavors. Elevate your experience with optional add-ons, such as additional mentorship and exclusive hackathon challenges for $300, or opt for the $600 package, which includes hackathon toolkits and VIP networking opportunities. Join us at the Hackathon Challenge and unlock the potential to redefine the future through the power of coding and collaboration.",
       "servicesIncluded": [
@@ -67,16 +67,16 @@
         "Prizes for winners",
         "Networking opportunities"
       ],
-      "priceRange": [
+      "additionalServices": [
         {
-          "additionalPrice": "$300",
+          "additionalPrice": 300,
           "services": [
             "Additional mentorship",
             "Exclusive hackathon challenges"
           ]
         },
         {
-          "additionalPrice": "$600",
+          "additionalPrice": 600,
           "services": ["Hackathon toolkits", "VIP networking"]
         }
       ],
@@ -89,8 +89,8 @@
   {
     "name": "AI Summit",
     "image": "https://i.ibb.co/1zp61Dz/1.jpg",
-    "price": "$1,500",
-    "subtitle": "Exploring artificial intelligence",
+    "price": 1500,
+    "subtitle": "An exploration of the limitless possibilities of artificial intelligence with expert keynotes, product showcases, and AI workshops.",
     "details": {
       "description": "Embark on a journey into the realm of artificial intelligence with our AI Summit service—a thoughtfully curated experience focused on exploring the cutting edge of AI technology. Immerse yourself in expertly planned events, including insightful keynotes from AI thought leaders, captivating showcases of AI products, and engaging networking sessions. Our comprehensive package covers event planning and coordination, ensuring a seamless exploration of the limitless possibilities of AI. Elevate your experience by opting for additional features, such as immersive AI workshops and interactive demos for $600, or delve deeper into the AI landscape with industry insights and exclusive product launches for $1,200. Join us at the AI Summit and be part of the conversation shaping the future of artificial intelligence.",
       "servicesIncluded": [
@@ -100,13 +100,13 @@
         "Networking sessions",
         "Workshops"
       ],
-      "priceRange": [
+      "additionalServices": [
         {
-          "additionalPrice": "$600",
+          "additionalPrice": 600,
           "services": ["AI workshops", "Interactive AI demos"]
         },
         {
-          "additionalPrice": "$1,200",
+          "additionalPrice": 1200,
           "services": ["AI industry insights", "AI product launches"]
         }
       ],
@@ -116,8 +116,8 @@
   {
     "name": "Retro Game Expo",
     "image": "https://i.ibb.co/ZxPDsRC/1.jpg",
-    "price": "$1,200",
-    "subtitle": "Nostalgia for gamers",
+    "price": 1200,
+    "subtitle": "A haven for retro gaming enthusiasts with classic game tournaments, collectibles, and vibrant cosplay.",
     "details": {
       "description": "Step into a realm of nostalgia with our Retro Game Expo service—a haven crafted exclusively for retro gaming enthusiasts. Immerse yourself in a meticulously planned event that goes beyond ordinary, offering classic game tournaments, booths featuring timeless favorites, collectible vendors, and a vibrant cosplay parade. Our comprehensive package covers expert event planning and coordination, ensuring a seamless trip down memory lane. Enhance your Retro Game Expo experience by opting for additional features, such as retro game tournaments and a showcase for an extra $400, or indulge in the ultimate throwback with exclusive retro game releases and a captivating retro game art gallery for an additional $800. Join us at the Retro Game Expo and rediscover the joy of gaming's golden era.",
       "servicesIncluded": [
@@ -127,13 +127,13 @@
         "Collectible vendors",
         "Cosplay parade"
       ],
-      "priceRange": [
+      "additionalServices": [
         {
-          "additionalPrice": "$400",
+          "additionalPrice": 400,
           "services": ["Retro game tournaments", "Retro game showcase"]
         },
         {
-          "additionalPrice": "$800",
+          "additionalPrice": 800,
           "services": [
             "Exclusive retro game releases",
             "Retro game art gallery"
@@ -146,8 +146,8 @@
   {
     "name": "Blockchain Conference",
     "image": "https://i.ibb.co/bgkdW39/1.jpg",
-    "price": "$1,800",
-    "subtitle": "Exploring blockchain technology",
+    "price": 1800,
+    "subtitle": "An immersive experience dedicated to exploring the vast landscape of blockchain technology with expert discussions and interactive workshops.",
     "details": {
       "description": "Embark on a journey into the realm of decentralized innovation with our Blockchain Conference service—an immersive experience dedicated to exploring the vast landscape of blockchain technology. Engage in expertly planned events, including enlightening discussions led by blockchain experts, hands-on product demos, and interactive workshops that delve into the intricacies of this transformative technology. Our all-encompassing package covers meticulous event planning and coordination, ensuring a seamless exploration of blockchain's potential. Elevate your experience by opting for additional features, such as engaging panel discussions and a showcase of groundbreaking blockchain startups for an extra $900. For the trailblazers, our $1,500 package offers a deep dive into blockchain with a hackathon and insights into the latest industry trends. Join us at the Blockchain Conference and be at the forefront of the revolution reshaping the future of technology.",
       "servicesIncluded": [
@@ -157,16 +157,16 @@
         "Interactive workshops",
         "Networking opportunities"
       ],
-      "priceRange": [
+      "additionalServices": [
         {
-          "additionalPrice": "$900",
+          "additionalPrice": 900,
           "services": [
             "Blockchain panel discussions",
             "Blockchain startup showcase"
           ]
         },
         {
-          "additionalPrice": "$1,500",
+          "additionalPrice": 1500,
           "services": ["Blockchain hackathon", "Blockchain industry trends"]
         }
       ],

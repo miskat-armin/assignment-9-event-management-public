@@ -1,17 +1,41 @@
-import { Card } from "flowbite-react";
+import { Button, Card } from "flowbite-react";
+import { Link } from "react-router-dom";
 
-const ServiceCard = ({image}) => {
+const ServiceCard = ({ image, name, subtitle, price }) => {
   return (
     <Card
-    imgSrc={image}
-    className="p-4 sm:p-6 md:p-8 bg-white dark:bg-gray-800 shadow-md">
-      <h5 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
+      renderImage={() => (
+        <img src={image} className="object-cover h-52 rounded-t-lg" />
+      )}
+      className="hover:scale-105 transform transition duration-500 cursor-pointer"
+    >
+      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white m-0">
+        {name}
       </h5>
-      <p className="mt-2 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-normal text-gray-700 dark:text-gray-400">
-        Here are the biggest enterprise technology acquisitions of 2021 so far,
-        in reverse chronological order.
+      <p className="text-gray-500">
+        Base Price: {"	\u0024"} {price}
       </p>
+      <p className="font-normal text-gray-700 dark:text-gray-400">{subtitle}</p>
+      <Link to={`/event/${name}`}>
+        <Button className="w-40">
+          More details
+          <svg
+            className="w-6 h-6 text-white dark:text-white ml-4"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </Button>
+      </Link>
     </Card>
   );
 };
