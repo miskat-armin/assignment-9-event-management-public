@@ -8,15 +8,11 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleLogout = () => {
-    // Sign out the user
-    //firebase.auth().signOut();
-  };
-
+  
   return (
     <header className="bg-white shadow-lg sticky top-0 w-full z-10">
       <div className="container mx-auto flex justify-between lg:justify-normal items-center py-4 px-4 lg:px-0">
-        <h1 className="text-2xl font-semibold">Your Logo</h1>
+        <h1 className="text-2xl font-semibold mr-10">Your Logo</h1>
         {/* Hamburger menu button for mobile */}
         <button
           onClick={toggleMobileMenu}
@@ -35,9 +31,9 @@ const Header = () => {
         {/* Desktop and tablet navigation */}
         <nav className={`hidden lg:flex space-x-4 items-center ${isMobileMenuOpen ? 'hidden' : 'block'}`}>
           <ul className="flex space-x-4">
-            <li><NavLinkItem to="/" label="Home" /></li>
-            <li><NavLinkItem to="/about" label="About" /></li>
-            <li><NavLinkItem to="/services" label="Services" /></li>
+          <li><NavLinkItem to="/" label="Home" /></li>
+            <li><NavLinkItem to="/blog" label="Blog" /></li>
+            <li><NavLinkItem to="/history" label="History" /></li>
             <li><NavLinkItem to="/contact" label="Contact" /></li>
           </ul>
         </nav>
@@ -47,8 +43,8 @@ const Header = () => {
         <div className="lg:hidden">
           <ul className="p-4 space-y-2">
             <li><NavLinkItem to="/" label="Home" /></li>
-            <li><NavLinkItem to="/about" label="About" /></li>
-            <li><NavLinkItem to="/services" label="Services" /></li>
+            <li><NavLinkItem to="/blog" label="Blog" /></li>
+            <li><NavLinkItem to="/history" label="History" /></li>
             <li><NavLinkItem to="/contact" label="Contact" /></li>
           </ul>
         </div>

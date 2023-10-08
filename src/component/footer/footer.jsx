@@ -1,46 +1,54 @@
+import { Footer } from "flowbite-react";
+import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 
-const Footer = () => {
+export default function AppFooter() {
   return (
-    <footer className="bg-gray-800 text-white py-6">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-around px-4 lg:px-0">
-        {/* Logo and site info */}
-        <div className="flex flex-col items-center lg:items-start space-y-4 lg:space-y-6 lg:mr-12">
-          <img src="/your-logo.png" alt="Your Logo" className="w-12 lg:w-16" />
-          <h1 className="text-xl lg:text-2xl font-semibold">Your Website Name</h1>
-          <p className="text-sm lg:text-base">Your website description goes here.</p>
+    <Footer container className=" bg-gray-800 text-white rounded-none mt-auto">
+      <div className="w-full">
+        <div className="grid w-full justify-between sm:flex sm:justify-around md:flex md:grid-cols-1">
+          <div className="text-white">
+            <Footer.Brand
+              alt="Flowbite Logo"
+              href="https://flowbite.com"
+              name={<span style={{ color: 'white' }}>Website name</span>}
+              src="https://flowbite.com/docs/images/logo.svg"
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+            <div>
+              <Footer.Title title="about" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Flowbite</Footer.Link>
+                <Footer.Link href="#">Tailwind CSS</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="Follow us" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Github</Footer.Link>
+                <Footer.Link href="#">Discord</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="Legal" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Privacy Policy</Footer.Link>
+                <Footer.Link href="#">Terms & Conditions</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+          </div>
         </div>
-        {/* Footer links */}
-        <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-12 mt-4 lg:mt-0">
-          {/* Resources */}
-          <div className="text-center lg:text-left">
-            <h2 className="text-lg font-semibold">Resources</h2>
-            <ul className="space-y-2">
-              <li><a href="/articles">Articles</a></li>
-              <li><a href="/tutorials">Tutorials</a></li>
-              <li><a href="/downloads">Downloads</a></li>
-            </ul>
-          </div>
-          {/* Help */}
-          <div className="text-center lg:text-left">
-            <h2 className="text-lg font-semibold">Help</h2>
-            <ul className="space-y-2">
-              <li><a href="/faq">FAQ</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul>
-          </div>
-          {/* Follow Us */}
-          <div className="text-center lg:text-left">
-            <h2 className="text-lg font-semibold">Follow Us</h2>
-            <ul className="space-y-2">
-              <li><a href="/facebook">Facebook</a></li>
-              <li><a href="/twitter">Twitter</a></li>
-              <li><a href="/instagram">Instagram</a></li>
-            </ul>
+        <Footer.Divider />
+        <div className="w-full sm:flex sm:items-center sm:justify-around">
+          <Footer.Copyright by="Flowbite™" href="#" year={2022} />
+          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+            <Footer.Icon href="#" icon={BsFacebook} />
+            <Footer.Icon href="#" icon={BsInstagram} />
+            <Footer.Icon href="#" icon={BsTwitter} />
+            <Footer.Icon href="#" icon={BsGithub} />
           </div>
         </div>
       </div>
-    </footer>
+    </Footer>
   );
-};
-
-export default Footer;
+}

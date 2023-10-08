@@ -5,7 +5,7 @@ const ServiceCard = ({ image, name, subtitle, price }) => {
   return (
     <Card
       renderImage={() => (
-        <img src={image} className="object-cover h-52 rounded-t-lg" />
+        <img src={image} className="object-fit h-60 rounded-t-lg" />
       )}
       className="hover:scale-105 transform transition duration-500 cursor-pointer"
     >

@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Footer from "../component/footer/footer";
+import AppFooter from "../component/footer/footer";
 import Header from "../component/header/navBar";
 
 const Layout = () => {
@@ -9,7 +9,7 @@ const Layout = () => {
       <div className="max-w-[85%] mx-auto">
         <Outlet />
       </div>
-      <Footer />
+      <AppFooter />
     </div>
   );
 };
