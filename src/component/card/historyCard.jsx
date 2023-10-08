@@ -3,28 +3,28 @@ import { Button, Card } from "flowbite-react";
 import { Link } from "react-router-dom";
 
 const HistoryCard = ({ service }) => {
-  console.log(service);
   return (
     <Card className="max-w-sm">
       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {service.serviceName}
       </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        {
-          <ul>
-            {service.selectedServices.map((selectedService, index) => (
-              <div>
-                <p>{selectedService.additionalPrice}</p>
-                <ul className="list-disc">
-                  {selectedService.services?.map((service, idx) => (
-                    <li>{service}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </ul>
-        }
-      </p>
+      <p className="font-semibold">Total price: {service.totalPrice}</p>
+      <p className="mb-[-16px]">Additional Services: </p>
+      {
+        <ul className="list-decimal ml-4">
+          {service.selectedServices?.map((selectedService, index) => (
+            <div>
+              <li>Price: {selectedService.additionalPrice}</li>
+              <ul className="list-disc">
+                {selectedService.services?.map((service, idx) => (
+                  <li className="ml-2">{service}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </ul>
+      }
+
       <Link to={`/event/${service.serviceName}`}>
         <Button className="w-40">
           More details

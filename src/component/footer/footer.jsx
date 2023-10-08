@@ -9,7 +9,7 @@ export default function AppFooter() {
           <div className="text-white">
             <Footer.Brand
               alt="Flowbite Logo"
-              href="https://flowbite.com"
+              href={window.location.href}
               name={<span style={{ color: 'white' }}>Website name</span>}
               src="https://flowbite.com/docs/images/logo.svg"
             />

@@ -6,8 +6,8 @@ const Layout = () => {
   return (
     <div>
       <Header />
-      <div className="max-w-[85%] mx-auto">
-        <Outlet />
+      <div className="mx-auto">
+        <Outlet/>
       </div>
       <AppFooter />
     </div>
