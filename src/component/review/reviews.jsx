@@ -4,17 +4,28 @@ import React from "react";
 const reviews = [
   {
     id: 1,
-    name: "John Doe",
-    image: "https://example.com/profile1.jpg",
-    review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Sarah Smith",
+    image: "https://example.com/sarah.jpg",
+    review: "I recently used this website to organize a gaming event, and I couldn't be happier with the results. The team behind it is incredibly professional and made the entire process seamless.",
   },
   {
     id: 2,
-    name: "John Doe",
-    image: "https://example.com/profile1.jpg",
-    review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Mike Johnson",
+    image: "https://example.com/mike.jpg",
+    review: "I've attended multiple tech conferences organized by this website, and each one has been a fantastic experience. The speakers, workshops, and overall organization are top-notch.",
   },
-  // Add more reviews here
+  {
+    id: 3,
+    name: "Emily Rogers",
+    image: "https://example.com/emily.jpg",
+    review: "As a streamer, I rely on events like these to connect with my audience. This website has consistently delivered engaging gaming events that help me grow my channel. Kudos to the team!",
+  },
+  {
+    id: 4,
+    name: "David Chen",
+    image: "https://example.com/david.jpg",
+    review: "I had the pleasure of working with this website to host a tech product launch event. Their attention to detail and commitment to success were impressive. I highly recommend them.",
+  },
 ];
 
 const CustomerReviews = () => {

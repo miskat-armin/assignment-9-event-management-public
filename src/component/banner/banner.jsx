@@ -81,26 +81,8 @@ const BannerContainer = ({ handleBannerExploreClick }) => {
   };
 
   return (
-    <Banner className="w-screen">
-      {/* <div className="h-full md:h-[70vh] lg:h-screen  w-full flex flex-col-reverse md:flex-row md:mt-0">
-        <div className=" h-[40vh] md:h-full w-full mb-10 md:mb-0 flex flex-col justify-center items-center bg-[url('/wave_background.png')] bg-no-repeat bg-cover">
-          <p className="xl:text-7xl md:text-5xl text-3xl z-10 mb-5">
-            Level Up Your Events
-          </p>
-          <p className="xl:text-4xl md:text-3xl text-2xl z-10 mb-5 text-center">
-            Powering Tomorrow's Tech and Gaming Experiences
-          </p>
-          <Button onClick={scrollToCards} size="xl" className="z-10">
-            Explore services <BsArrowBarDown className="ml-2" size={32} />
-          </Button>
-        </div>
-        <Lottie
-          className="h-full w-full md:w-1/2"
-          animationData={banner_animation}
-          loop={true}
-        />
-      </div> */}
-      <div className="h-full md:h-[70vh] lg:h-screen lg:min-h-[1024px]  w-full flex flex-col-reverse md:flex-row md:mt-0">
+    <div className="w-full">
+      <div className="h-full md:h-[70vh] lg:h-screen  w-full flex flex-col-reverse md:flex-row mx-auto">
         <div className="h-[40vh] md:h-full min-h-[300px] w-full mb-10 md:mb-0 flex flex-col justify-center items-center border-b-2">
           <Particles options={options} init={particlesInit}  />
           <p className="xl:text-7xl md:text-5xl text-3xl xl:font-extrabold z-10 mb-5">
@@ -114,7 +96,7 @@ const BannerContainer = ({ handleBannerExploreClick }) => {
           </Button>
         </div>
       </div>
-    </Banner>
+    </div>
   );
 };
 

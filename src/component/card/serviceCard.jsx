@@ -12,11 +12,11 @@ const ServiceCard = ({ image, name, subtitle, price }) => {
         <p className="text-gray-500 px-6">
           Base Price: {"	\u0024"} {price}
         </p>
-        <p className="font-normal text-clip line-clamp-3 text-gray-700 dark:text-gray-400 px-6 my-4">
+        <p className="font-normal text-clip line-clamp-3 text-gray-700 dark:text-gray-400 px-6 my-2">
           {subtitle}
         </p>
         <Link to={`/event/${name}`}>
-          <Button className="w-40 bg-[#7373E3] hover:bg-[#4D4DDB] mx-6">
+          <Button color="" className="w-40 bg-[#7373E3] hover:bg-[#4D4DDB] mx-6">
             More details
             <svg
               className="w-6 h-6 text-white dark:text-white ml-4"

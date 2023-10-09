@@ -16,9 +16,9 @@ const BookedServices = () => {
   const bookedServices = JSON.parse(localStorage.getItem(user?.uid)) || [];
 
   return (
-    <div className="container mx-auto p-4 my-10">
-      <h1 className=" text-3xl md:text-5xl  font-bold mb-4">Booked Services</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="container mx-auto my-10 min-h-screen p-2">
+      <h1 className=" text-3xl md:text-5xl font-extrabold mb-4">Booked Services</h1>
+      <div className="flex flex-row flex-wrap justify-center xl:justify-normal gap-6 ">
         {bookedServices.map((service, index) => (
           <HistoryCard key={index} service={service} />
         ))}

@@ -13,8 +13,8 @@ const Header = () => {
   };
 
   return (
-    <header className="shadow-lg sticky top-0 w-full z-50 bg-[#E6E6FA]">
-      <div className="container mx-auto flex justify-between lg:justify-normal items-center py-4 px-4">
+    <header className="shadow-lg sticky top-0 w-full bg-white bg-opacity-60 z-50">
+      <div className="mx-auto flex justify-between lg:justify-normal items-center py-4 px-10">
         <h1 className="text-2xl font-semibold mr-10">Your Logo</h1>
         {/* Hamburger menu button for mobile */}
         <button
@@ -74,7 +74,7 @@ const Header = () => {
                 placeholder="Profile"
               />
 
-              <Button color="" size="sm" className="w-24 bg-red-600">
+              <Button onClick={Logout} color="" size="sm" className="w-24 bg-red-600">
                 <p className="text-white font-semibold">Logout</p>
               </Button>
             </div>

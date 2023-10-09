@@ -2,7 +2,7 @@ import React from "react";
 
 const HistoryCard = ({ service }) => {
   return (
-    <div data-aos="zoom-in" className="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col p-6 cursor-pointer">
+    <div data-aos="zoom-in" className="max-w-md bg-white border border-gray-200 rounded-lg shadow flex flex-col p-6 cursor-pointer">
       <h5 className="text-2xl font-extrabold tracking-tight text-gray-900">
         {service.serviceName}
       </h5>

@@ -7,6 +7,7 @@ import Registration from "../pages/registration";
 import Service from "../pages/serviceDetails";
 import Signin from "../pages/signin";
 import PrivateRoute from "../PrivateRoute/privateRoute";
+import BlogPage from "../pages/blog";
 
 const CustomRouter = createBrowserRouter([
   {
@@ -33,6 +34,14 @@ const CustomRouter = createBrowserRouter([
         element: (
           <PrivateRoute>
             <BookedServices />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/blog",
+        element: (
+          <PrivateRoute>
+            <BlogPage />
           </PrivateRoute>
         ),
       },

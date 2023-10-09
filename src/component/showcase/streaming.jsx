@@ -6,7 +6,7 @@ import { FaMoneyCheckAlt } from "react-icons/fa";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 const StreamingShowCase = () => {
   return (
-    <div className="bg-gray-200 w-full flex flex-col md:flex-row ">
+    <div className="bg-gray-200 w-full flex flex-col md:flex-row max-xl:py-6">
       <div className="w-full md:w-2/3 flex flex-col justify-center items-center pt-4 md:pt-0">
         <div className="w-[60%]">
           <p className="text-3xl md:text-5xl font-semibold mb-2">
@@ -20,13 +20,12 @@ const StreamingShowCase = () => {
           <div className="text-2xl md:text-3xl">
             <ul>
               <li className="flex">
-                <BsGlobe2 className="mr-2" /> Global Reach{" "}
+                <BsGlobe2 className="mr-2" /> Global Reach
               </li>
               <li className="flex">
                 <FaMoneyCheckAlt className="mr-2" /> Monetize
               </li>
               <li className="flex">
-                {" "}
                 <HiOutlineVideoCamera className="mr-2" /> HD Quality
               </li>
             </ul>
