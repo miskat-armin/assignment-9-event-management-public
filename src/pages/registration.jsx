@@ -4,18 +4,18 @@ import { BiHide, BiShow } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
-
+import { toast } from "react-toastify";
 
 const Registration = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isVisible, setIsVisible] = useState(false);
-  const [ showError, setError ] = useState({
-    error: false,
-    message: ''
-  })
+
+  const navigate = useNavigate();
+  const { state } = useLocation();
+  const from = state?.from || "/";
 
   const { Registration, GoogleSignIn } = useAuth();
 
@@ -33,24 +33,41 @@ const Registration = () => {
 
   const handleGoogleLogin = () => {
     GoogleSignIn()
-    .then(res => {
-        console.log(res.user)
-    })
-    .catch(err => {
-        console.log(err.message)
-    })
-  }
+      .then((res) => {
+        toast.success("Successful Registration");
+        navigate(from, { replace: true });
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters");
+      return;
+    }
+
+    if (/[A-Z]/.test(password)) {
+      toast.error("Password must not contain uppercase letters");
+      return;
+    }
+
+    if (/[^a-zA-Z0-9]/.test(password)) {
+      toast.error("Password must not contain special characters");
+      return;
+    }
+
     Registration(email.trim(), password)
-    .then(res => {
-      console.log(res.user)
-    })
-    .catch(e => {
-      console.log(e.message)
-    })
+      .then((res) => {
+        toast.success("Successful log in");
+        navigate(from, { replace: true });
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
   };
 
   return (
@@ -67,7 +84,7 @@ const Registration = () => {
 
             <TextInput
               id="email1"
-              placeholder="name@flowbite.com"
+              placeholder="Email"
               required
               type="email"
               value={email}
@@ -76,17 +93,24 @@ const Registration = () => {
               className="w-full max-w-sm  py-2 rounded-lg border-gray-300 focus:outline-none focus:ring focus:ring-indigo-500"
             />
 
-            <TextInput
-              id="password1"
-              placeholder="Password"
-              required
-              type="password"
-              icon={RiLockPasswordFill}
-              rightIcon={isVisible ? BiShow : BiHide}
-              value={password}
-              onChange={handlePasswordChange}
-              className="w-full max-w-sm py-2 rounded-md  border-gray-300 focus:outline-none focus:ring focus:ring-indigo-500"
-            />
+            <div className="w-full max-w-xs lg:max-w-sm py-2 rounded-md border-gray-300 focus:outline-none focus:ring focus:ring-indigo-500 relative">
+              <TextInput
+                id="password1"
+                placeholder="Password"
+                required
+                type={isVisible ? "text" : "password"}
+                icon={RiLockPasswordFill}
+                value={password}
+                onChange={handlePasswordChange}
+                className="w-full py-2 rounded-md border-gray-300 focus:outline-none focus:ring focus:ring-indigo-500"
+              />
+              <div
+                className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                onClick={handlePasswordVisibilityChange}
+              >
+                {isVisible ? <BiShow /> : <BiHide />}
+              </div>
+            </div>
 
             <Button
               size="lg"

@@ -1,6 +1,6 @@
 import { Banner, Button } from "flowbite-react";
 import React from "react";
-import { BsArrowBarDown } from "react-icons/bs";
+import { IoIosArrowDown } from "react-icons/io";
 
 const options = {
   background: { 
@@ -82,8 +82,8 @@ const BannerContainer = ({ handleBannerExploreClick }) => {
 
   return (
     <div className="w-full">
-      <div className="h-full md:h-[70vh] lg:h-screen  w-full flex flex-col-reverse md:flex-row mx-auto">
-        <div className="h-[40vh] md:h-full min-h-[300px] w-full mb-10 md:mb-0 flex flex-col justify-center items-center border-b-2">
+      <div className="h-full md:h-[70vh] lg:h-screen w-full flex flex-col-reverse md:flex-row my-auto">
+        <div className="h-[40vh] md:h-full min-h-[300px] w-full mb-10 md:mb-0 flex flex-col justify-center items-center">
           <Particles options={options} init={particlesInit}  />
           <p className="xl:text-7xl md:text-5xl text-3xl xl:font-extrabold z-10 mb-5">
             Level Up Your Events
@@ -91,8 +91,8 @@ const BannerContainer = ({ handleBannerExploreClick }) => {
           <p className="xl:text-4xl md:text-3xl text-2xl z-10 mb-5 text-center">
             Powering Tomorrow's Tech and Gaming Experiences
           </p>
-          <Button onClick={scrollToCards} size="xl" color=""  className="z-10 bg-[#7373E3] hover:bg-[#4D4DDB]">
-            Explore services <BsArrowBarDown className="ml-2" size={32} />
+          <Button onClick={scrollToCards} size="xl" color=""  className="z-10 bg-[#7373E3] hover:bg-[#4D4DDB] hover:scale-105 transform transition duration-500">
+            <p className="text-white text-lg">Explore services</p><IoIosArrowDown className="ml-2 text-white" size={32} />
           </Button>
         </div>
       </div>

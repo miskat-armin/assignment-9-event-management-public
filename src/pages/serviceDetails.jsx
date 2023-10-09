@@ -111,7 +111,7 @@ const Service = () => {
         </div>
         {service && (
           <div className="flex flex-col lg:flex-row">
-            <div className="w-full lg:w-3/4">
+            <div data-aos="slide-right" className="w-full lg:w-3/4">
               <p className="text-2xl font-semibold">Description</p>
               <p className="text-lg font-light mb-4">
                 {service.details?.description}
@@ -165,7 +165,7 @@ const Service = () => {
             </div>
 
             {/*cart */}
-            <div className="bg-gray-100 p-6 rounded-md mt-6 md:mt-0 w-full lg:w-1/4 md:pl-4 flex flex-col items-start h-full">
+            <div data-aos="slide-left" className="bg-gray-100 p-6 rounded-md mt-6 md:mt-0 w-full lg:w-1/4 md:pl-4 flex flex-col items-start h-full">
               <h2 className="text-3xl font-bold mb-2">Cart</h2>
               <div className="w-full">
                 <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-row justify-between">

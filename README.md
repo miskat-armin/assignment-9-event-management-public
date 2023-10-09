@@ -1,8 +1,10 @@
-# React + Vite
+# LevelUpLoom
+## Project Features
+   +  ### Dynamic routing
+   Dynamic routing uses a template to create pages dynamically with different routes. In this application every time a user clicks on the more details button a new dynamic route is created using the given template.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+   +  ### Data stored into local storage
+   The project uses local storage of the browser to saved data. We stored the data of donated causes in local storage and fetch them in another page to show where the user donated.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   +  ### Pie chart
+   The project uses pie chart to show the user what percentage of causes he has donated to. The pie chart also contains legend.

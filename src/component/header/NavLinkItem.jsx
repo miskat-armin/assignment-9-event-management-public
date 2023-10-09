@@ -5,7 +5,8 @@ const NavLinkItem = ({ to, label }) => {
   return (
     <NavLink
       to={to}
-      className={({ isActive, isPending }) =>
+      className={
+        ({ isActive, isPending }) =>
         isPending
           ? "pending"
           : isActive
@@ -13,7 +14,7 @@ const NavLinkItem = ({ to, label }) => {
           : ""
       }
     >
-      {label}
+      <p className="text-lg">{label}</p>
     </NavLink>
   );
 };

@@ -1,17 +1,20 @@
-import React, { useState } from "react";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { BiHide, BiShow } from "react-icons/bi";
+import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { BiShow } from "react-icons/bi";
-import { BiHide } from "react-icons/bi";
-import { FcGoogle } from "react-icons/fc";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { useAuth } from "../context/authContext";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
+  const { state } = useLocation();
+  const from = state?.from || "/";
 
   const { SignIn, GoogleSignIn } = useAuth();
 
@@ -30,10 +33,11 @@ const Signin = () => {
   const handleGoogleLogin = () => {
     GoogleSignIn()
       .then((res) => {
-        console.log(res.user);
+        toast.success("Successful log in");
+        navigate(from, { replace: true });
       })
       .catch((err) => {
-        console.log(err.message);
+        toast.error(err.message);
       });
   };
 
@@ -42,10 +46,11 @@ const Signin = () => {
 
     SignIn(email.trim(), password)
       .then((res) => {
-        console.log(res.user);
+        toast.success("Successful log in");
+        navigate(from, { replace: true });
       })
-      .then((err) => {
-        console.log(err.message);
+      .catch((err) => {
+        toast.error(err.message);
       });
   };
 
@@ -61,7 +66,7 @@ const Signin = () => {
 
             <TextInput
               id="email1"
-              placeholder="name@flowbite.com"
+              placeholder="Email"
               required
               type="email"
               value={email}
@@ -69,18 +74,24 @@ const Signin = () => {
               icon={MdEmail}
               className="w-full max-w-xs lg:max-w-sm   py-2 rounded-lg border-gray-300 focus:outline-none focus:ring focus:ring-indigo-500"
             />
-
-            <TextInput
-              id="password1"
-              placeholder="Password"
-              required
-              type="password"
-              icon={RiLockPasswordFill}
-              rightIcon={isVisible ? BiShow : BiHide}
-              value={password}
-              onChange={handlePasswordChange}
-              className="w-full max-w-xs lg:max-w-sm py-2 rounded-md  border-gray-300 focus:outline-none focus:ring focus:ring-indigo-500"
-            />
+            <div className="w-full max-w-xs lg:max-w-sm py-2 rounded-md border-gray-300 focus:outline-none focus:ring focus:ring-indigo-500 relative">
+              <TextInput
+                id="password1"
+                placeholder="Password"
+                required
+                type={isVisible ? "text" : "password"}
+                icon={RiLockPasswordFill}
+                value={password}
+                onChange={handlePasswordChange}
+                className="w-full py-2 rounded-md border-gray-300 focus:outline-none focus:ring focus:ring-indigo-500"
+              />
+              <div
+                className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                onClick={handlePasswordVisibilityChange}
+              >
+                {isVisible ? <BiShow /> : <BiHide />}
+              </div>
+            </div>
 
             <div className="flex items-center gap-2">
               <Checkbox id="remember" />
@@ -103,6 +114,7 @@ const Signin = () => {
 
             <Link
               to={"/registration"}
+              state={{from: from}}
               className="md:hidden self-center text-blue-500 underline"
             >
               Create an account

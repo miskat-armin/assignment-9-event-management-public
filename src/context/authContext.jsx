@@ -18,6 +18,8 @@ export function useAuth() {
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   const provider = new GoogleAuthProvider();
 
   const auth = getAuth(app);
@@ -45,6 +47,7 @@ const AuthProvider = ({ children }) => {
       } else {
         setUser(null);
       }
+      setLoading(false);
     });
 
     return () => {
@@ -57,7 +60,8 @@ const AuthProvider = ({ children }) => {
     SignIn,
     Registration,
     GoogleSignIn,
-    Logout
+    Logout,
+    loading
   };
 
   return (

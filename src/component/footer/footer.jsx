@@ -18,7 +18,7 @@ export default function AppFooter() {
             <Footer.Brand
               alt="Flowbite Logo"
               href={window.location.href}
-              name={<span style={{ color: "white" }}>Website name</span>}
+              name={<span style={{ color: "white" }}>Level Up Loom</span>}
               src="https://flowbite.com/docs/images/logo.svg"
             />
           </div>
@@ -48,7 +48,7 @@ export default function AppFooter() {
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-around">
-          <Footer.Copyright by="Flowbite™" href="#" year={2022} />
+          <Footer.Copyright by="LevelUpLoop™" href="#" year={2022} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
             <Footer.Icon href="#" icon={BsFacebook} />
             <Footer.Icon href="#" icon={BsInstagram} />

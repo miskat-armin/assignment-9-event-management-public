@@ -22,12 +22,13 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div data-aos="zoom-in-up" className="w-full mb-20">
+      <div data-aos="zoom-in-up" className="mb-20 w-full">
         <BannerContainer handleBannerExploreClick={handleBannerExploreClick} />
       </div>
 
       <p className="font-bold text-3xl md:text-5xl mb-5">Our Services</p>
       <div
+        data-aos="zoom-in"
         ref={CardRef}
         className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 my-10 max-w-[85%]"
       >

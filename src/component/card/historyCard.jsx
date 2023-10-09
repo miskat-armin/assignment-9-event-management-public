@@ -16,7 +16,7 @@ const HistoryCard = ({ service }) => {
       {
         <div className=" border-gray-300 w-full flex flex-col justify-between">
           {service.selectedServices?.map((selectedService, index) => (
-            <div className="flex flex-row justify-between border-b-2 py-2">
+            <div key={index} className="flex flex-row justify-between border-b-2 py-2">
               <div>
                 <div className="flex flex-col">
                   {selectedService.services?.map((service, idx) => (

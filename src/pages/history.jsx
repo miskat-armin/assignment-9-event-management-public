@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import HistoryCard from "../component/card/historyCard";
 import { useAuth } from "../context/authContext";
 
