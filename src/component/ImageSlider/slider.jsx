@@ -9,7 +9,7 @@ const ImageSlider = ({ images }) => {
     <Carousel slideInterval={2000}>
       {images.map((image, idx) => {
         return (
-          <img src={image} alt={idx} className="w-full rounded-lg object-fit" />
+          <img src={image} alt={idx} className="w-full rounded-lg object-cover" />
         );
       })}
     </Carousel>

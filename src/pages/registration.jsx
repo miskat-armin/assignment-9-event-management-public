@@ -1,7 +1,7 @@
 import { Button, Card, TextInput } from "flowbite-react";
-import React, { useContext, useState } from "react";
-import GoogleButton from "react-google-button";
+import React, { useState } from "react";
 import { BiHide, BiShow } from "react-icons/bi";
+import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
@@ -93,11 +93,14 @@ const Registration = () => {
               type="submit"
               className="w-32 self-center md:self-start"
             >
-              Submit
+              Register
             </Button>
 
-            <GoogleButton
+            <p className="text-lg">Or login with</p>
+            <FcGoogle
+              className="cursor-pointer"
               onClick={handleGoogleLogin}
+              size={32}
             />
 
             <Link

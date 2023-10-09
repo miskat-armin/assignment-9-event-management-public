@@ -30,7 +30,11 @@ const CustomRouter = createBrowserRouter([
       },
       {
         path: "/history",
-        element: <BookedServices></BookedServices>,
+        element: (
+          <PrivateRoute>
+            <BookedServices />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/signin",

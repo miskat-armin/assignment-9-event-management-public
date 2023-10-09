@@ -1,51 +1,35 @@
 import React from "react";
-import { Button, Card } from "flowbite-react";
-import { Link } from "react-router-dom";
 
 const HistoryCard = ({ service }) => {
   return (
-    <Card className="max-w-sm">
-      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+    <div data-aos="zoom-in" className="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col p-6 cursor-pointer">
+      <h5 className="text-2xl font-extrabold tracking-tight text-gray-900">
         {service.serviceName}
       </h5>
-      <p className="font-semibold">Total price: {service.totalPrice}</p>
-      <p className="mb-[-16px]">Additional Services: </p>
+      <p className="font-semibold text-lg">
+        Total price: ${service.totalPrice}
+      </p>
+      <p className="font-semibold text-lg mb-4">
+        Purchase Date:{service.date}{" "}
+      </p>
+      <p className="font-bold text-xl">Additional Services: </p>
       {
-        <ul className="list-decimal ml-4">
+        <div className=" border-gray-300 w-full flex flex-col justify-between">
           {service.selectedServices?.map((selectedService, index) => (
-            <div>
-              <li>Price: {selectedService.additionalPrice}</li>
-              <ul className="list-disc">
-                {selectedService.services?.map((service, idx) => (
-                  <li className="ml-2">{service}</li>
-                ))}
-              </ul>
+            <div className="flex flex-row justify-between border-b-2 py-2">
+              <div>
+                <div className="flex flex-col">
+                  {selectedService.services?.map((service, idx) => (
+                    <div className="ml-2">{service}</div>
+                  ))}
+                </div>
+              </div>
+              <div className="font-semibold">${selectedService?.additionalPrice}</div>
             </div>
           ))}
-        </ul>
+        </div>
       }
-
-      <Link to={`/event/${service.serviceName}`}>
-        <Button className="w-40">
-          More details
-          <svg
-            className="w-6 h-6 text-white dark:text-white ml-4"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </Button>
-      </Link>
-    </Card>
+    </div>
   );
 };
 

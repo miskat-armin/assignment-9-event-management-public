@@ -22,9 +22,10 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="mb-20">
+      <div data-aos="zoom-in-up" className="mb-20">
         <BannerContainer handleBannerExploreClick={handleBannerExploreClick} />
       </div>
+
       <p className="font-bold text-3xl md:text-5xl mb-5">Our Services</p>
       <div
         ref={CardRef}
@@ -39,12 +40,15 @@ const Home = () => {
             price={service.price}
           />
         ))}
-      </div> 
-      <div data-aos="fade-in" className="flex justify-center items-center flex-col mb-10">
+      </div>
+      <div
+        data-aos="slide-up"
+        className="flex justify-center items-center flex-col mb-10 max-w-[85%]"
+      >
         <p className="font-bold text-3xl md:text-5xl mb-5">Customer Reviews</p>
         <CustomerReviews />
       </div>
-      <div data-aos="slide-right" className="w-full border-2">
+      <div data-aos="slide-right" className="w-full">
         <StreamingShowCase />
       </div>
     </div>
