@@ -9,13 +9,13 @@ const StreamingShowCase = () => {
     <div className="bg-gray-200 w-full flex flex-row">
       <div className="w-2/3 flex flex-col justify-center items-center">
         <p className="text-3xl md:text-5xl font-semibold mb-2">Live Streaming</p>
-        <p className="text-2xl md:text-3xl self">
+        <div className="text-2xl md:text-3xl">
             <ul>
                 <li className="flex justify-center"><BsGlobe2 className="mr-2"/> Global Reach </li>
                 <li className="flex"><FaMoneyCheckAlt className="mr-2"/> Monetize</li>
                 <li className="flex"> <HiOutlineVideoCamera className="mr-2"/> HD Quality</li>
             </ul>
-        </p>
+        </div>
       </div>
       <Lottie className="w-1/3"  animationData={LiveAnimation} loop={true}/>
     </div>
