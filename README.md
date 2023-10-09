@@ -1,7 +1,7 @@
 # LevelUpLoom
 ## Project Features
    +  ### Firebase Authentication
-  The project uses firebase for authentication. It support both email and password based authentication and google provider based authencation. 
+  The project uses firebase for authentication. It support both email and password based authentication and google provider based authentication. 
 
    +  ### Private route and redirect
   The project has some selected route as private, they cannot be seen by anyone who is not authenticated. It also has redirect meaning anytime someone logins they are redirected to the last private route the used tried to visit. 

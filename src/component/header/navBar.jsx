@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header className="shadow-lg sticky top-0 w-full bg-white lg:bg-opacity-60 z-50">
       <div className="mx-auto flex lg:justify-between items-center py-2 px-4 md:px-10">
-        
+
         <img className="w-[70px]" src="./Logo.png" alt="" />
         {/* Hamburger menu button for mobile */}
         <button
@@ -28,9 +28,8 @@ const Header = () => {
           className="lg:hidden focus:outline-none ml-auto lg:ml-0"
         >
           <svg
-            className={`w-6 h-6 ${
-              isMobileMenuOpen ? "text-gray-500" : "text-gray-800"
-            }`}
+            className={`w-6 h-6 ${isMobileMenuOpen ? "text-gray-500" : "text-gray-800"
+              }`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -50,9 +49,8 @@ const Header = () => {
         </button>
         {/* Desktop and tablet navigation */}
         <nav
-          className={`hidden lg:flex space-x-4 items-center ${
-            isMobileMenuOpen ? "hidden" : "block"
-          }`}
+          className={`hidden lg:flex space-x-4 items-center ${isMobileMenuOpen ? "hidden" : "block"
+            }`}
         >
           <ul className="flex space-x-4">
             <li>
@@ -109,12 +107,10 @@ const Header = () => {
             <li>
               <NavLinkItem to="/history" label="History" />
             </li>
-            <li>
-              <NavLinkItem to="/contact" label="Contact" />
-            </li>
-            <li>
-               <NavLinkItem to="/signin" label={<span className="flex items-center">Log in <GoSignIn className="ml-2"/></span>} />
-            </li>
+            {!user &&
+              <li>
+                <NavLinkItem to="/signin" label={<span className="flex items-center">Log in <GoSignIn className="ml-2" /></span>} />
+              </li>}
           </ul>
         </div>
       )}

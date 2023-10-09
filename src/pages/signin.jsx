@@ -46,6 +46,8 @@ const Signin = () => {
 
     SignIn(email.trim(), password)
       .then((res) => {
+        setEmail("");
+        setPassword("");
         toast.success("Successful log in");
         navigate(from, { replace: true });
       })
