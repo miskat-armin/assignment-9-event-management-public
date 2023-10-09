@@ -1,6 +1,6 @@
-import { Banner, Button } from "flowbite-react";
-import React from "react";
+import { Button } from "flowbite-react";
 import { IoIosArrowDown } from "react-icons/io";
+import PropTypes from 'prop-types';
 
 const options = {
   background: { 
@@ -89,7 +89,7 @@ const BannerContainer = ({ handleBannerExploreClick }) => {
             Level Up Your Events
           </p>
           <p className="xl:text-4xl md:text-3xl text-2xl z-10 mb-5 text-center">
-            Powering Tomorrow's Tech and Gaming Experiences
+            Powering Tomorrow&apos;s Tech and Gaming Experiences
           </p>
           <Button onClick={scrollToCards} size="xl" color=""  className="z-10 bg-[#7373E3] hover:bg-[#4D4DDB] hover:scale-105 transform transition duration-500">
             <p className="text-white text-lg">Explore services</p><IoIosArrowDown className="ml-2 text-white" size={32} />
@@ -98,6 +98,10 @@ const BannerContainer = ({ handleBannerExploreClick }) => {
       </div>
     </div>
   );
+};
+
+BannerContainer.propTypes = {
+  handleBannerExploreClick: PropTypes.func.isRequired,
 };
 
 export default BannerContainer;

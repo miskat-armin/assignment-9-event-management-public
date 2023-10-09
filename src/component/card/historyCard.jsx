@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const HistoryCard = ({ service }) => {
   return (
@@ -20,7 +20,7 @@ const HistoryCard = ({ service }) => {
               <div>
                 <div className="flex flex-col">
                   {selectedService.services?.map((service, idx) => (
-                    <div className="ml-2">{service}</div>
+                    <div key={idx} className="ml-2">{service}</div>
                   ))}
                 </div>
               </div>
@@ -31,6 +31,20 @@ const HistoryCard = ({ service }) => {
       }
     </div>
   );
+};
+
+HistoryCard.propTypes = {
+  service: PropTypes.shape({
+    serviceName: PropTypes.string.isRequired,
+    totalPrice: PropTypes.number.isRequired,
+    date: PropTypes.string.isRequired,
+    selectedServices: PropTypes.arrayOf(
+      PropTypes.shape({
+        services: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+        additionalPrice: PropTypes.number.isRequired,
+      }).isRequired
+    ),
+  }).isRequired,
 };
 
 export default HistoryCard;

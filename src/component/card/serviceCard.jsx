@@ -1,5 +1,6 @@
-import { Button, Card } from "flowbite-react";
+import { Button } from "flowbite-react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ServiceCard = ({ image, name, subtitle, price }) => {
   return (
@@ -26,6 +27,13 @@ const ServiceCard = ({ image, name, subtitle, price }) => {
       </div>
     </div>
   );
+};
+
+ServiceCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 };
 
 export default ServiceCard;

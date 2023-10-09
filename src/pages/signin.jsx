@@ -1,5 +1,5 @@
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { BiHide, BiShow } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";

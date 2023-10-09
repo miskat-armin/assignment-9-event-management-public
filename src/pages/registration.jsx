@@ -1,5 +1,5 @@
 import { Button, Card, TextInput } from "flowbite-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { BiHide, BiShow } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
@@ -50,13 +50,13 @@ const Registration = () => {
       return;
     }
 
-    if (/[A-Z]/.test(password)) {
-      toast.error("Password must not contain uppercase letters");
+    if (!(/[A-Z]/.test(password))) {
+      toast.error("Password must contain an uppercase letter");
       return;
     }
 
-    if (/[^a-zA-Z0-9]/.test(password)) {
-      toast.error("Password must not contain special characters");
+    if (!(/[^a-zA-Z0-9]/.test(password))) {
+      toast.error("Password must contain a special character");
       return;
     }
 

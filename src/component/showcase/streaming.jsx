@@ -1,5 +1,4 @@
 import Lottie from "lottie-react";
-import React from "react";
 import LiveAnimation from "../lotties/Live_animation.json";
 import { BsGlobe2 } from "react-icons/bs";
 import { FaMoneyCheckAlt } from "react-icons/fa";

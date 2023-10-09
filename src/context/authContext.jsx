@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import app from "../config/firebase";
 import {
   getAuth,
@@ -67,6 +68,13 @@ const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider value={AuthInfo}>{children}</AuthContext.Provider>
   );
+};
+
+AuthProvider.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default AuthProvider;

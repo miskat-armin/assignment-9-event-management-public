@@ -1,19 +1,24 @@
 import { Carousel } from "flowbite-react";
-import React, { useState } from "react";
+import PropTypes from "prop-types";
+
 
 const ImageSlider = ({ images }) => {
   console.log(images);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   return (
     <Carousel slideInterval={2000}>
       {images.map((image, idx) => {
         return (
-          <img src={image} alt={idx} className="w-full rounded-lg object-cover" />
+          <img key={idx} src={image} alt={idx} className="w-full rounded-lg object-cover" />
         );
       })}
     </Carousel>
   );
 };
+
+ImageSlider.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+};
+
 
 export default ImageSlider;

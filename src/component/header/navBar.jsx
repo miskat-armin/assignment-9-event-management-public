@@ -1,5 +1,5 @@
 import { Avatar, Button, Dropdown } from "flowbite-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiLogOut } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
@@ -19,8 +19,9 @@ const Header = () => {
 
   return (
     <header className="shadow-lg sticky top-0 w-full bg-white lg:bg-opacity-60 z-50">
-      <div className="mx-auto flex lg:justify-between items-center py-4 px-4 md:px-10">
-        <h1 className="text-2xl font-semibold mr-10">Your Logo</h1>
+      <div className="mx-auto flex lg:justify-between items-center py-2 px-4 md:px-10">
+        
+        <img className="w-[70px]" src="./Logo.png" alt="" />
         {/* Hamburger menu button for mobile */}
         <button
           onClick={toggleMobileMenu}

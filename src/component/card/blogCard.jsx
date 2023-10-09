@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const BlogCard = ({ blog }) => {
   return (
@@ -15,6 +15,15 @@ const BlogCard = ({ blog }) => {
       </div>
     </div>
   );
+};
+
+BlogCard.propTypes = {
+  blog: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default BlogCard;

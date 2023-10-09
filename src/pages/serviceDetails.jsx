@@ -1,12 +1,13 @@
-import { Button, Card } from "flowbite-react";
+import { Button } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify"; // Import react-toastify
-import "react-toastify/dist/ReactToastify.css"; // Import the CSS for react-toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import ImageSlider from "../component/ImageSlider/slider";
 import { useAuth } from "../context/authContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 
 const Service = () => {
   const { service_name } = useParams();
@@ -111,7 +112,7 @@ const Service = () => {
         </div>
         {service && (
           <div className="flex flex-col lg:flex-row">
-            <div data-aos="slide-right" className="w-full lg:w-3/4">
+            <div className="w-full lg:w-3/4">
               <p className="text-2xl font-semibold">Description</p>
               <p className="text-lg font-light mb-4">
                 {service.details?.description}
@@ -150,8 +151,8 @@ const Service = () => {
                         className="flex flex-row justify-between items-center w-full ml-10"
                       >
                         <div className="flex flex-col">
-                          {priceOption.services.map((serviceName) => {
-                            return <div>{serviceName}</div>;
+                          {priceOption.services.map((serviceName,idx) => {
+                            return <div key={idx}>{serviceName}</div>;
                           })}
                         </div>
                         <div className="font-semibold">
@@ -165,7 +166,7 @@ const Service = () => {
             </div>
 
             {/*cart */}
-            <div data-aos="slide-left" className="bg-gray-100 p-6 rounded-md mt-6 md:mt-0 w-full lg:w-1/4 md:pl-4 flex flex-col items-start h-full">
+            <div className="bg-gray-100 p-6 rounded-md mt-6 md:mt-0 w-full lg:w-1/4 md:pl-4 flex flex-col items-start h-full">
               <h2 className="text-3xl font-bold mb-2">Cart</h2>
               <div className="w-full">
                 <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-row justify-between">
@@ -175,10 +176,10 @@ const Service = () => {
 
                 <div className="border-b-2 w-full" />
                 {cart.map((service, index) => (
-                  <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-row justify-between">
+                  <div key={index} className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-row justify-between">
                     <div className="flex flex-col">
-                      {service.services.map((serviceName) => (
-                        <div>{serviceName}</div>
+                      {service.services.map((serviceName,idx) => (
+                        <div key={idx}>{serviceName}</div>
                       ))}
                     </div>
                     <div className="font-semibold">
