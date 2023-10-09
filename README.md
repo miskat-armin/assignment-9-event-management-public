@@ -9,7 +9,7 @@
    +  ### Animation
    The project consists of some basic animation. It uses the (<a href="https://michalsnik.github.io/aos/">AOS animation library</a>) for the animation.
 
-    +  ### Local storage
+   +  ### Local storage
     The project uses local storage to store users purchase history and other info relaed to purchase. 
 
    +  ### Animated icons/picture
